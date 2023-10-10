@@ -6,6 +6,8 @@ TagManager:
   tags:
   - wall ver
   - wall hor
+  - death
+  - score
   layers:
   - Default
   - TransparentFX

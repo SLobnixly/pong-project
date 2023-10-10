@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class inputpaddle : MonoBehaviour
 {
@@ -16,36 +17,79 @@ public class inputpaddle : MonoBehaviour
 
     void Update()
     {
+
         if (LeftOrRight == "left")
         {
          if (Input.GetKey(KeyCode.W))
          {
-            Debug.Log("yes W is pressed down");
-            transform.Translate(Vector3.up * speed * Time.deltaTime);
+                if (transform.position.y <= 3.5f)
+                {
+                    speed = 3f;
+                    Debug.Log("yes W is pressed");
+                   transform.Translate(Vector3.up * speed * Time.deltaTime);
+
+                }
+                else if (transform.position.y == 3.5f) 
+                { speed = 0f; }
+           
             
          }
+
+
+
          else if (Input.GetKey(KeyCode.S))
          {
-            Debug.Log("yew S is pressed down");
-            transform.Translate(Vector3.down * speed * Time.deltaTime);
-        
-         }
+
+                if (transform.position.y >= -3.5f)
+                {
+                    speed = 3f;
+                    Debug.Log("yes S is pressed");
+                    transform.Translate(Vector3.down * speed * Time.deltaTime);
+
+                }
+                else if (transform.position.y == -3.5f) 
+                { speed = 0f; }
+
+            }
         }
         if (LeftOrRight == "right")
         {
+
+
+
             if (Input.GetKey(KeyCode.UpArrow))
             {
-                Debug.Log("yes uparrow is pressed down");
-                transform.Translate(Vector3.up * speed * Time.deltaTime);
+                if (transform.position.y <= 3.5f)
+                {
+                    speed = 3f;
+                    Debug.Log("yes uparrow is pressed");
+                    transform.Translate(Vector3.up * speed * Time.deltaTime);
+
+                }
+                else if (transform.position.y == 3.5f) 
+                { speed = 0f; }
 
             }
+
+
+
             else if (Input.GetKey(KeyCode.DownArrow))
             {
-                Debug.Log("yew downarrow is pressed down");
-                transform.Translate(Vector3.down * speed * Time.deltaTime);
+                if (transform.position.y >= -3.5f)
+                {
+                    speed = 3f;
+                    Debug.Log("yes downarrow is pressed up");
+                    transform.Translate(Vector3.down * speed * Time.deltaTime);
 
+                }
+                else if (transform.position.y == -3.5f ) 
+                    { 
+                    
+                    speed = 0f; }
+                
             }
         }
+        
 
 
     }
