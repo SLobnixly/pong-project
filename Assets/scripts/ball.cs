@@ -42,12 +42,12 @@ public class ball : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("wall ver"))
         {
-            xspeed = xspeed * -1.03f;
+            xspeed = xspeed * -1.01f;
             Debug.Log("Colliders entering Collision up");
         }
         if (collision.gameObject.CompareTag("wall hor"))
         {
-            yspeed = yspeed * -0.99f;
+            yspeed = yspeed * -1.02f;
             Debug.Log("Colliders entering Collision down");
         }
         if (collision.gameObject.CompareTag("death R")) 

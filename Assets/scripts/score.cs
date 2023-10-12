@@ -27,21 +27,21 @@ public class score : MonoBehaviour
     {
 
 
-    }
+}
     public int scoreR;
     public int scoreL;
         public void pointL()
     {
         scoreL++;
         scoreText.text = scoreL + " - " + scoreR;
-        if (scoreL >= 10)
+        if (scoreL >= 5)
         { scorewin.scorewinL(); }
     }
     public void pointR()
     {
         scoreR++;
         scoreText.text = scoreL + " - " + scoreR;
-        if (scoreR >= 10)
+        if (scoreR >= 5)
         { scorewin.scorewinR(); }
     }
 }
