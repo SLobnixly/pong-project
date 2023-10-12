@@ -8,6 +8,7 @@ TagManager:
   - wall hor
   - death
   - score
+  - death R
   layers:
   - Default
   - TransparentFX
