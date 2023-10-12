@@ -4,15 +4,15 @@ using System.Collections.Generic;
 using System.Net.Security;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UIElements;
+
 
 public class ball : MonoBehaviour
 {
     private score score;
     public float xposition = 1f;
     public float yposition = 1f;
-    public float xspeed = 1f;
-    public float yspeed = 1f;
+    public float xspeed = 7f;
+    public float yspeed = 5f;
     
     
 
@@ -42,23 +42,29 @@ public class ball : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("wall ver"))
         {
-            xspeed = xspeed * -1f;
+            xspeed = xspeed * -1.03f;
             Debug.Log("Colliders entering Collision up");
         }
         if (collision.gameObject.CompareTag("wall hor"))
         {
-            yspeed = yspeed * -1f;
+            yspeed = yspeed * -0.99f;
             Debug.Log("Colliders entering Collision down");
         }
         if (collision.gameObject.CompareTag("death R")) 
-        {xposition = 0f; yposition = 0f;
+        {
+            yspeed = 5f;
+            xspeed = 7f;
+            xposition = -7f; yposition = 0f;
             score.pointL();
 
         }
         if (collision.gameObject.CompareTag("death"))
         {
-            xposition = 0f; yposition = 0f;
+            yspeed = -5f;
+            xspeed = -7f;
+            xposition = 7f; yposition = 0f;
             score.pointR();
+            
 
         }
     }

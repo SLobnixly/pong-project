@@ -5,21 +5,21 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.UI;
-using System.Net.NetworkInformation;
-using System.Reflection;
-using System;
-using Unity.Burst.Intrinsics;
-using Unity.VisualScripting;
+
+
+
+
 
 
 public class score : MonoBehaviour
 { 
         public TMP_Text scoreText;
     
+    private scorewin scorewin;
     // Start is called before the first frame update
     void Start()
     {
-
+        scorewin = GameObject.FindObjectOfType<scorewin>();
     }
 
     // Update is called once per frame
@@ -34,10 +34,14 @@ public class score : MonoBehaviour
     {
         scoreL++;
         scoreText.text = scoreL + " - " + scoreR;
+        if (scoreL >= 10)
+        { scorewin.scorewinL(); }
     }
     public void pointR()
     {
         scoreR++;
         scoreText.text = scoreL + " - " + scoreR;
+        if (scoreR >= 10)
+        { scorewin.scorewinR(); }
     }
 }

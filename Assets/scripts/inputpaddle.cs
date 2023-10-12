@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.UIElements;
+
 
 public class inputpaddle : MonoBehaviour
 {
@@ -24,7 +24,7 @@ public class inputpaddle : MonoBehaviour
          {
                 if (transform.position.y <= 3.5f)
                 {
-                    speed = 3f;
+                    speed = 7f;
                     Debug.Log("yes W is pressed");
                    transform.Translate(Vector3.up * speed * Time.deltaTime);
 
@@ -42,7 +42,7 @@ public class inputpaddle : MonoBehaviour
 
                 if (transform.position.y >= -3.5f)
                 {
-                    speed = 3f;
+                    speed = 7f;
                     Debug.Log("yes S is pressed");
                     transform.Translate(Vector3.down * speed * Time.deltaTime);
 
@@ -61,7 +61,7 @@ public class inputpaddle : MonoBehaviour
             {
                 if (transform.position.y <= 3.5f)
                 {
-                    speed = 3f;
+                    speed = 7f;
                     Debug.Log("yes uparrow is pressed");
                     transform.Translate(Vector3.up * speed * Time.deltaTime);
 
@@ -77,7 +77,7 @@ public class inputpaddle : MonoBehaviour
             {
                 if (transform.position.y >= -3.5f)
                 {
-                    speed = 3f;
+                    speed = 7f;
                     Debug.Log("yes downarrow is pressed up");
                     transform.Translate(Vector3.down * speed * Time.deltaTime);
 
