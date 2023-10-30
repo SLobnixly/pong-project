@@ -9,6 +9,9 @@ TagManager:
   - death
   - score
   - death R
+  - scene 1
+  - scene 2
+  - scene 3
   layers:
   - Default
   - TransparentFX

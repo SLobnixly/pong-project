@@ -64,9 +64,9 @@ public class ball : MonoBehaviour
             xspeed = -7f;
             xposition = 7f; yposition = 0f;
             score.pointR();
-            
+         
 
-        }
+            }
     }
 
 }
