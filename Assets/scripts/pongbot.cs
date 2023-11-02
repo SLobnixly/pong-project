@@ -20,7 +20,7 @@ public class pongbot : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {      
+    {      // chase after ball but be a bit slower
           transform.position = new Vector3(transform.position.x, ball.transform.position.y /3*2 );
         
     }

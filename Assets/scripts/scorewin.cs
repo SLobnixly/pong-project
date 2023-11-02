@@ -18,10 +18,12 @@ public class scorewin : MonoBehaviour
     {
         
     }
+    // when enough points left wins
     public void scorewinL()
     {
         scorewintext.text = "left side has won!!!";
     }
+    // when enough points right wins
     public void scorewinR()
     {
         scorewintext.text = "right side has won!!!";

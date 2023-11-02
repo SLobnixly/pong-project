@@ -13,6 +13,7 @@ using UnityEngine.UI;
 
 public class score : MonoBehaviour
 { 
+    //text
         public TMP_Text scoreText;
     
     private scorewin scorewin;
@@ -28,10 +29,12 @@ public class score : MonoBehaviour
 
 
 }
+    //score int
     public int scoreR;
     public int scoreL;
         public void pointL()
     {
+        // score left wins
         scoreL++;
         scoreText.text = scoreL + " - " + scoreR;
         if (scoreL >= 5)
@@ -39,6 +42,7 @@ public class score : MonoBehaviour
     }
     public void pointR()
     {
+        //score right wins
         scoreR++;
         scoreText.text = scoreL + " - " + scoreR;
         if (scoreR >= 5)

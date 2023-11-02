@@ -8,9 +8,21 @@ using UnityEngine;
 
 public class ball : MonoBehaviour
 {
+    /// <summary>
+    /// ball position
+    /// ball speed
+    /// collision req
+    /// collision code
+    /// score count
+    /// </summary>
+     
     private score score;
+   
+    // set position
+
     public float xposition = 1f;
     public float yposition = 1f;
+    // set speed
     public float xspeed = 7f;
     public float yspeed = 5f;
     
@@ -29,7 +41,7 @@ public class ball : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //set xposition with speed
         xposition += + xspeed * Time.deltaTime;
         yposition += + yspeed * Time.deltaTime;
         transform.position = new Vector3(xposition, yposition, 0);
@@ -37,7 +49,7 @@ public class ball : MonoBehaviour
         
         
     }
-
+    // function for hitting paddle and wall
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("wall ver"))
@@ -50,6 +62,7 @@ public class ball : MonoBehaviour
             yspeed = yspeed * -1.02f;
             Debug.Log("Colliders entering Collision down");
         }
+        // resets ball and gives score
         if (collision.gameObject.CompareTag("death R")) 
         {
             yspeed = 5f;
